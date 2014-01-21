@@ -12,4 +12,9 @@ class Device < ActiveRecord::Base
         [:serial, :name, :type, :radio_state, 
         :battery_low, :transmit_error, :temperature, :valve_pos], methods: :room)
   end
+
+  def to_param
+    serial
+  end  
+
 end

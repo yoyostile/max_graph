@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title MaxGraph
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %a.navbar-brand MaxGraph
+        %nav.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li 
+              = link_to 'Cubes', cubes_path
+
+    = yield

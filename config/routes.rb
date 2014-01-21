@@ -54,6 +54,9 @@ MaxGraph::Application.routes.draw do
   #     resources :products
   #   end
 
+  root 'cubes#index'
+
+  resources :devices
   resources :heaters
   resources :cubes do
     resources :rooms

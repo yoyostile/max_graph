@@ -2,7 +2,6 @@ class HeatersController < ApplicationController
   protect_from_forgery except: :create
 
   def create
-    p params
     cube = Cube.find_or_create_by_serial(serial: params['Cube.Serial'], firmware: params['Cube.Firmware'])
     room_params.each do |k,v|
       room = cube.rooms.find_or_create_by_uid(uid: k, name: v['name'])
