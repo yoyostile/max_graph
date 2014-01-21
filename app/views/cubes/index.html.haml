@@ -1,0 +1,4 @@
+%h2 Cubes
+%ul
+  - @cubes.each do |cube|
+    %li= link_to cube.serial, cube_path(cube)

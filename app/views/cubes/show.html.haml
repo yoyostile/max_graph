@@ -1,0 +1,8 @@
+%h2 
+  Cube -
+  = @cube.serial
+%ul
+  - @rooms.each do |room|
+    %li
+      = link_to room.name, cube_room_path(@cube, room)
+      = room.measurements.last.measured_temp

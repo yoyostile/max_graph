@@ -55,4 +55,7 @@ MaxGraph::Application.routes.draw do
   #   end
 
   resources :heaters
+  resources :cubes do
+    resources :rooms
+  end
 end

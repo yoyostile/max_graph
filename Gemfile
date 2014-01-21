@@ -10,6 +10,7 @@ gem "pg", "~> 0.17.1"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml'
+gem 'bootstrap-sass-rails', '~> 3.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -37,6 +38,10 @@ end
 group :development do
   gem 'better_errors'
   gem 'byebug'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password

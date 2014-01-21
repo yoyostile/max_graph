@@ -9,7 +9,8 @@ class HeatersController < ApplicationController
       room.measure v
     end
     device_params.each do |k,v|
-      device = cube.devices.find_or_create_by(v.reject!{ |k,_| ['temperature_timestamp'].include? k })
+      device = cube.devices.find_or_create_by_serial(v['serial'])
+      device.update! v.reject{ |k,_| ['temperature_timestamp'].include? k }
     end
     head :ok
   end
