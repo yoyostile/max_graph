@@ -18,7 +18,7 @@ class Device < ActiveRecord::Base
   end  
 
   def to_cacti
-    "#{temperature.to_s} #{valve_pos}"
+    "temp:#{temperature.to_s} valve_pos:#{valve_pos}"
   end
 
 end
