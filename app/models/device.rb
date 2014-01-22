@@ -17,4 +17,8 @@ class Device < ActiveRecord::Base
     serial
   end  
 
+  def to_cacti
+    "#{temperature.to_s} #{valve_pos}"
+  end
+
 end

@@ -5,7 +5,7 @@ class DevicesController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @device }
-      format.js { render inline: @device.temperature.to_s }
+      format.js { render inline: @device.to_cacti }
     end
   end
 
